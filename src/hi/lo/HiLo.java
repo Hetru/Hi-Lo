@@ -8,7 +8,6 @@ package hi.lo;
 import java.util.*;
 import java.io.*;
 /**
- * sfsdfi
  * @author hetru2942
  * This program is a game called "Hi-Lo". The program will generate a random number
  * The user will wager a number of points into the "pot".
@@ -74,26 +73,26 @@ public class HiLo {
             int riskPoints = inputRisk.nextInt();
             
             if(riskPoints<=0){ 
-            /*if the user wagers 0 or less points, the program will ask the 
-            user how many points they would like to spend and inform them that 
-            there previous input was not enough
-            */
+                /*if the user wagers 0 or less points, the program will ask the 
+                user how many points they would like to spend and inform them that 
+                there previous input was not enough
+                */
                 System.out.println("\nSorry, but you have to pay to play.");
                 inputRisk();
             } else if(riskPoints>pointGame){
-            /*
-            If the user wagers more points than the amount the user has, the 
-            programn will inform the user that the user has insufficient amount 
-            of points and goes back to asking the user how many points the user 
-            would like to wager
-            */
+                /*
+                If the user wagers more points than the amount the user has, the 
+                programn will inform the user that the user has insufficient amount 
+                of points and goes back to asking the user how many points the user 
+                would like to wager
+                */
                 System.out.println("\nInsufficient amount of points.");
                 inputRisk();
             }else{
-            /*
-            If the user did not wager too many points, or too little, the 
-            program will continue by calling the bet method
-            */
+                /*
+                If the user did not wager too many points, or too little, the 
+                program will continue by calling the bet method
+                */
                 bet(riskPoints);
             }
         }
@@ -277,18 +276,18 @@ public class HiLo {
             System.out.println("You lose.");
                 
             if(pointGame == 0){
-            /*
-            \
-                if the user has reached 0 points, then the user has lost the entire 
-            game, and message indicating this appear and the program will end
-            */
-            System.out.println("\n\n"
-                + "  ________                        ________                     \n" +
-                " /  _____/_____    _____   ____   \\_____  \\___  __ ___________ \n" +
-                "/   \\  ___\\__  \\  /     \\_/ __ \\   /   |   \\  \\/ // __ \\_  __ \\\n" +
-                "\\    \\_\\  \\/ __ \\|  Y Y  \\  ___/  /    |    \\   /\\  ___/|  | \\/\n" +
-                " \\______  (____  /__|_|  /\\___  > \\_______  /\\_/  \\___  >__|   \n" +
-                "        \\/     \\/      \\/     \\/          \\/          \\/       ");
+                /*
+                \
+                    if the user has reached 0 points, then the user has lost the entire 
+                game, and message indicating this appear and the program will end
+                */
+                System.out.println("\n\n"
+                    + "  ________                        ________                     \n" +
+                    " /  _____/_____    _____   ____   \\_____  \\___  __ ___________ \n" +
+                    "/   \\  ___\\__  \\  /     \\_/ __ \\   /   |   \\  \\/ // __ \\_  __ \\\n" +
+                    "\\    \\_\\  \\/ __ \\|  Y Y  \\  ___/  /    |    \\   /\\  ___/|  | \\/\n" +
+                    " \\______  (____  /__|_|  /\\___  > \\_______  /\\_/  \\___  >__|   \n" +
+                    "        \\/     \\/      \\/     \\/          \\/          \\/       ");
             }
             else{
                 /*
@@ -395,8 +394,8 @@ public class HiLo {
             writeFile = new BufferedWriter(out);
     
             for (int i = 0; i < 1; i++){
-            writeFile.write(String.valueOf(pointGame));
-            writeFile.newLine();
+                writeFile.write(String.valueOf(pointGame));
+                writeFile.newLine();
             }
             
             writeFile.close();
