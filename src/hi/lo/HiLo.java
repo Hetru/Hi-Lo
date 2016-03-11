@@ -8,6 +8,7 @@ package hi.lo;
 import java.util.*;
 import java.io.*;
 /**
+ * sfsdfi
  * @author hetru2942
  * This program is a game called "Hi-Lo". The program will generate a random number
  * The user will wager a number of points into the "pot".
